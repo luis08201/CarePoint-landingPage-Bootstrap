@@ -1,0 +1,464 @@
+@import 'fonts';
+@import 'normalize';
+@import 'mixin';
+@import 'reset';
+@import 'class';
+
+.header {
+    &__top {
+        &--brand {
+            display: inline-block;
+            margin: 0 auto;
+        }
+
+        &--img {
+            display: block;
+            width: 120px;
+        }
+
+        &--contact {
+            gap: 26px;
+        }
+
+        &--item {
+            gap: 10px;
+        }
+
+        &--info {
+            font-size: 0.7rem;
+            display: block;
+        }
+
+        &--buttons {
+            gap: 5px;
+        }
+
+        &--bar {
+            background-color: var(--white);
+            width: 18px;
+            height: 2px;
+            border-radius: 5px;
+        }
+    }
+
+    &__home {
+        &--bg {
+            background-image: url(../img/background.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 72% center;
+            width: 100%;
+            height: 300px;
+        }
+
+        &--col {
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &--article {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            text-align: center;
+        }
+    }
+
+    @media screen and (min-width:768px) {
+        &__home {
+            &--bg {
+                background-position: 46% center;
+                height: 500px;
+            }
+
+            &--col {
+                height: 500px;
+            }
+
+            &--article {
+                margin-left: 250px;
+            }
+
+            &--secondheading {
+                font-size: 2.4rem;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    @media screen and (min-width:992px) {
+        &__top {
+            &--navbar {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    background-color: var(--blue);
+                    width: 100%;
+                    height: 2px;
+                }
+            }
+
+            &--buttons {
+                gap: 10px;
+            }
+        }
+
+        &__home {
+            &--article {
+                margin-left: 350px;
+            }
+
+            &--secondheading {
+                font-size: 2.8rem;
+            }
+        }
+    }
+}
+
+.services {
+    padding: 62px 0;
+
+    &--bg {
+        background-color: var(--blue);
+    }
+
+    &__top {
+        margin-bottom: 40px;
+    }
+
+    &__secondheading {
+        text-align: center;
+        color: var(--white);
+        font-size: 2rem;
+    }
+
+    &__item {
+        padding: 15px 10px;
+
+        &--picture {
+            margin: 0 auto;
+            margin-bottom: 15px;
+        }
+
+        &--middleheading {
+            color: var(--white);
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        &--paragraph {
+            color: var(--white);
+            font-size: 0.9rem;
+            text-align: center;
+        }
+    }
+
+    @media screen and (min-width:992px) {
+        padding: 42px 0;
+
+        &__secondheading {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+.about {
+    padding: 62px 0;
+
+    &__top {
+        margin-bottom: 40px;
+        text-align: center;
+
+        & span {
+            color: var(--blue);
+        }
+    }
+
+    &__box {
+        gap: 15px;
+    }
+
+    &__img {
+        display: block;
+        width: 90%;
+        height: 350px;
+        max-width: 300px;
+        margin: 0 auto;
+        object-fit: contain;
+    }
+
+    &__item {
+
+        &--picture {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        &--img {
+            display: block;
+            width: 60px;
+        }
+
+        &--paragraph {
+            font-size: 0.85rem;
+            line-height: 1.5rem;
+        }
+    }
+
+    @media screen and (min-width:768px) {
+        &__img {
+            width: 100%;
+            height: 100%;
+        }
+
+        &__box {
+            gap: 25px;
+        }
+
+        &__item {
+            &--picture {
+                justify-content: space-between;
+            }
+        }
+    }
+
+    @media screen and (min-width:992px) {
+        padding: 42px 0;
+
+        &__secondheading {
+            font-size: 2.5rem;
+        }
+
+        &__box {
+            gap: 45px;
+        }
+
+        &__item {
+            &--picture {
+                gap: 20px;
+            }
+
+            &--img {
+                width: 120px;
+            }
+        }
+    }
+}
+
+.gallery {
+    padding: 62px 0;
+
+    &__top {
+        margin-bottom: 40px;
+    }
+
+    &__secondheading {
+        text-align: center;
+        color: var(--white);
+    }
+
+    &--bg {
+        background-color: var(--green);
+    }
+
+    &__picture {
+        padding: 15px 0;
+    }
+
+    &__img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+    }
+
+    @media screen and (min-width:992px) {
+        padding: 42px 0;
+
+        &__secondheading {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+.team {
+    padding: 62px 0;
+
+    &__top {
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    &__picture {
+        margin-bottom: 10px;
+        padding: 15px 0;
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        height: 250px;
+        object-fit: contain;
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+
+        &--title {
+            font-size: 0.8rem;
+            text-transform: capitalize;
+            text-align: center;
+        }
+
+        &--middleheading {
+            margin-bottom: 0;
+        }
+
+        &--socialnetwork {
+            display: inline-flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        &--sc i {
+            color: var(--blue);
+            font-size: 20px;
+            transition: var(--animation);
+        }
+
+        &--sc:hover i,
+        &--sc:focus i {
+            filter: drop-shadow(1px 1px 2px var(--blue));
+        }
+    }
+
+    &__secondheading {
+        & span {
+            color: var(--blue);
+        }
+    }
+
+    @media screen and (min-width:992px) {
+        padding: 42px 0;
+
+        &__img {
+            height: 200px;
+        }
+
+        &__secondheading {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+.footer {
+    padding: 62px 0;
+
+    &--bg {
+        background-color: var(--black);
+    }
+
+    &__left {
+        padding: 12px 0;
+
+        &--brand {
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        &--img {
+            display: block;
+            width: 160px;
+        }
+
+        &--paragraph {
+            color: var(--white);
+            font-size: 0.8rem;
+        }
+    }
+
+    &__middle {
+        padding: 12px 0;
+        display: flex;
+        flex-direction: column;        
+        gap: 12px;
+
+        &--link {
+            color: var(--white);
+            text-transform: capitalize;           
+            transition: var(--animation);
+
+            &:hover,
+            &:focus {
+                padding-left: 10px;
+            }
+        }
+
+        &--item {
+            gap: 15px;
+        }
+
+        &--box {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        &--info {
+            color: var(--white);
+            display: block;
+            font-size: 0.8rem;
+        }
+
+        &--middleheading {
+            color: var(--white);
+        }
+    }
+
+    &__right {
+        padding: 12px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &--middleheading {
+            color: var(--white);
+        }
+
+        &--sc {
+            transition: var(--animation);
+
+            &:hover,
+            &:focus {
+                background-color: var(--green);
+                color: var(--white);
+            }
+        }
+    }
+
+    @media screen and (min-width:768px) {
+        padding: 42px 0 32px;
+
+        &__left{
+            padding:10px 0;
+        }
+        &__middle{
+            padding:10px 0;
+            align-items: center;
+
+            &--link{
+                text-align: center;
+            }
+        }
+        &__right{
+            padding:10px 0;
+        }
+    }
+}

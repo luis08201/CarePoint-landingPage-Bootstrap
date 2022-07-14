@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: #00AEEF;
+    --blue-hover: #00afefa1;
+    --black: #2a2a2a;
+    --red: #DB1236;
+    --white:#ffffff;
+    --green:#37C3A8;
+
+    //TYPOGRAPHY
+    --Poppins: 'Poppins', sans-serif;
+    --Quicksand: 'Quicksand', sans-serif;
+
+    //transition
+    --animation:0.7s;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    font-size: 1rem;
+    font-family: var(--Poppins);
+}

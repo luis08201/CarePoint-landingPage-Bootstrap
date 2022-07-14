@@ -1,0 +1,82 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--black);
+    font-family: var(--Quicksand);
+    margin:0;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+p {
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+figure {
+    margin: 0;
+}
+
+.navbar-brand {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-collapse {
+    background-color: var(--blue);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show>.nav-link {
+    color: var(--white);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--white);
+    text-transform: capitalize;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--white);
+}
+
+@media screen and (min-width:992px) {
+    .navbar-collapse {
+        background-color: transparent;
+        padding: 0;
+        border-radius: 0;
+        margin-top: 0;
+    }
+
+    .navbar-light .navbar-nav .nav-link.active,
+    .navbar-light .navbar-nav .show>.nav-link {
+        color: var(--blue);
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        color: var(--black);
+    }
+
+    .navbar-light .navbar-nav .nav-link:focus,
+    .navbar-light .navbar-nav .nav-link:hover {
+        color: var(--blue);
+    }
+}
